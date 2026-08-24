@@ -4,28 +4,34 @@
     {
         static void Main(string[] args)
         {
-            string bossName = "Dessakon";
+            string bossName = "Kirin";
             char rank = 'S';
-            int level = 1;
-            int maxHp = 10000;
-            int CurrentHp = 9999;
-            float attackPower = 9999.99f;
-            double critMultiplier = 9.25;
+            int level = 7;
+            int maxHp = 240;
+            int currentHp = 175;
+            float attackPower = 42.5f;
+            double critMultiplier = 1.75;
             bool isBoss = true;
 
             Console.WriteLine("===== BOSS STATUS: INITIAL =====");
+            Console.WriteLine($"Name: {bossName}");
+            Console.WriteLine($"Rank: {rank}");
+            Console.WriteLine($"LVL: {level}");
+            Console.WriteLine($"HP: {currentHp} / {maxHp}");
+            Console.WriteLine($"Attack Power: {attackPower}");
+            Console.WriteLine($"Crit Multiplier: {critMultiplier}");
+            Console.WriteLine($"Is Boss: {isBoss}");
             Console.WriteLine();
 
-            int hpPercentage = (CurrentHp * 100) / maxHp;
-            Console.WriteLine($"HP Percent : {hpPercentage}%");
+            Console.WriteLine($"HP Percent: {(currentHp * 100) / maxHp}%");
             Console.WriteLine();
-            Console.WriteLine("Dessakon take 200 damage!");
-            CurrentHp = CurrentHp - 200;
+            Console.WriteLine($"Kirin takes 60 damage!");
             Console.WriteLine();
             Console.WriteLine("===== BOSS STATUS: AFTER DAMAGE =====");
-            Console.WriteLine($"HP : {CurrentHp}/{maxHp}");
-            int newhpPercentage = (CurrentHp * 100) / maxHp;
-            Console.WriteLine($"HP Percent : {newhpPercentage}%");
+            int myDMG = 60;
+            int afterHp = (currentHp - myDMG);
+            Console.WriteLine($"HP: {afterHp} / {maxHp}");
+            Console.WriteLine($"HP Percent: {(afterHp * 100) / maxHp}%");
         }
     }
 }
