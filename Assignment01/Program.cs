@@ -19,7 +19,7 @@ namespace Assignment01
             char rarityTier = 'A';
             int level = 153;
             float fruitEnergy = 350.75f;
-            double fruitPower = 1.75;
+            double fruitPower = 149.75;
             bool isAwakened = true;
 
             double levelDouble = level;
