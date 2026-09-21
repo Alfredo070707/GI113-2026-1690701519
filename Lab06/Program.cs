@@ -15,14 +15,14 @@ namespace Lab06
             int hungerStat = 100;
 
             Console.WriteLine("=== DinnerTime ===");
-            Console.WriteLine("Now you starving ,need to eat immediately ,but stay calm eat too fast would make you shoke");
+            Console.WriteLine("Now you starving ,need to eat immediately ,but stay calm eat too fast would make you choke");
             Console.WriteLine("Your Hunger: " + hungerStat + "" );
             Console.WriteLine("You need to make hunger stat below 30 in 3 choices but not too low to negative ,you gonna be greedy fat.");
-            Console.WriteLine("Caution! : your hunger stat will increase by 20 each turn you need to make a math to finish the meal");
+            Console.WriteLine("Caution! : your hunger stat will increase by 10 each turn you need to make a math to finish the meal");
             Console.WriteLine("Okay , let's start the meal!");
             Console.WriteLine();
             Console.WriteLine("=== OnTheTable ===");
-            Console.WriteLine("1) FryChicken | -30 Hunger ");
+            Console.WriteLine("1) FriedChicken | -30 Hunger ");
             Console.WriteLine("2) Pizza | -45 Hunger ");
             Console.WriteLine("3) Milk | -10 Hunger");
             Console.Write("Choose you want to eat first (1-3): ");
@@ -34,7 +34,7 @@ namespace Lab06
             {
                 Console.WriteLine();
                 Console.WriteLine();
-                Console.WriteLine("Its not in the choices, you did'nt eat anything");
+                Console.WriteLine("Its not in the choices, you didn't eat anything");
                 Console.WriteLine();
                 Console.WriteLine();
             }
@@ -44,7 +44,7 @@ namespace Lab06
             {
                 hungerStat = hungerStat - 30;
                 Console.WriteLine();
-                Console.WriteLine("You eat frychicken like its your last meal on earth ,now your Hunger is " + hungerStat + ".");
+                Console.WriteLine("You eat fried chicken like its your last meal on earth ,now your Hunger is " + hungerStat + ".");
                 Console.WriteLine();
                 Console.WriteLine();
 
@@ -76,8 +76,8 @@ namespace Lab06
             Console.WriteLine();
 
             Console.WriteLine("=== OnTheTable ===");
-            Console.WriteLine("1) CucamberSalad | -20 Hunger ");
-            Console.WriteLine("2) Spagetti | -50 Hunger ");
+            Console.WriteLine("1) CucumberSalad | -20 Hunger ");
+            Console.WriteLine("2) Spaghetti | -50 Hunger ");
             Console.WriteLine("3) Soda | -3 Hunger");
             Console.Write("Choose you want to eat next (1-3): ");
 
@@ -88,7 +88,7 @@ namespace Lab06
             {
                 Console.WriteLine();
                 Console.WriteLine();
-                Console.WriteLine("Its not in the choices, you did'nt eat anything");
+                Console.WriteLine("Its not in the choices, you didn't eat anything");
                 Console.WriteLine();
                 Console.WriteLine();
             }
@@ -98,7 +98,7 @@ namespace Lab06
             {
                 hungerStat = hungerStat - 20;
                 Console.WriteLine();
-                Console.WriteLine("You eat cucambersalad ,you feel great because you choose healthier ,now your Hunger is " + hungerStat + ".");
+                Console.WriteLine("You eat cucumbersalad ,you feel great because you choose healthier ,now your Hunger is " + hungerStat + ".");
                 Console.WriteLine();
                 Console.WriteLine();
             }
@@ -108,7 +108,7 @@ namespace Lab06
             {
                 hungerStat = hungerStat - 50;
                 Console.WriteLine();
-                Console.WriteLine("You eat spagetti like a black hole that swallow a star ,now your Hunger is " + hungerStat + ".");
+                Console.WriteLine("You eat spaghetti like a black hole that swallow a star ,now your Hunger is " + hungerStat + ".");
                 Console.WriteLine();
                 Console.WriteLine();
             }
@@ -139,7 +139,11 @@ namespace Lab06
             if (!thirdChoice || tChoice < 1 || tChoice > 3)
 
             {
-                Console.WriteLine("Not look out of the dish, you look not staving any more but you need to finish the meal");
+                Console.WriteLine();
+                Console.WriteLine();
+                Console.WriteLine("Its not in the choices, you didn't eat anything");
+                Console.WriteLine();
+                Console.WriteLine();
             }
 
             else if (tChoice == 1)
@@ -165,7 +169,6 @@ namespace Lab06
             else if (tChoice == 3)
 
             {
-                hungerStat = hungerStat - 9999999;
                 Console.WriteLine();
                 Thread.Sleep(3000);
                 Console.Clear();
@@ -185,19 +188,19 @@ namespace Lab06
 
             Console.WriteLine("=== MealSummary ===");
 
-            if (hungerStat > 30)
-            {
-                Console.WriteLine();
-                Console.WriteLine();
-                Console.WriteLine("You are still hungry!");
-                Console.WriteLine();
-                Console.WriteLine();
-            }
-            else if (hungerStat < 0)
+            if (hungerStat < 0)
             {
                 Console.WriteLine();
                 Console.WriteLine();
                 Console.WriteLine("You're greedy fat");
+                Console.WriteLine();
+                Console.WriteLine();
+            }
+            else if (hungerStat > 30)
+            {
+                Console.WriteLine();
+                Console.WriteLine();
+                Console.WriteLine("You are still hungry!");
                 Console.WriteLine();
                 Console.WriteLine();
             }
