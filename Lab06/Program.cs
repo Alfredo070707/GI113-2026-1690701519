@@ -136,7 +136,7 @@ namespace Lab06
                 return;
             }
 
-            // Final Meal Summar
+            // Final Meal Summary
             Console.WriteLine();
             Console.WriteLine("==========================================");
             Console.WriteLine($"FINAL HUNGER: {hungerStat} / {targetHunger}");
